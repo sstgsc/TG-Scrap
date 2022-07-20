@@ -73,7 +73,7 @@ all_participants = []
 all_participants = client.get_participants(target_group, aggressive=True)
  
 print(gr+'[+] Storing...')
-time.sleep(1)
+time.sleep(30)
 with open("list.csv","w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id'])
