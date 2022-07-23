@@ -15,9 +15,9 @@ banner()
 os.system("touch config.data")
 cpass = configparser.RawConfigParser()
 cpass.add_section('cred')
-xid = input(gr+"[+] Enter API ID : "+re)
+xid = 14913603
 cpass.set('cred', 'id', xid)
-xhash = input(gr+"[+] Enter Hash ID : "+re)
+xhash = c3eb6c57a275655da516fd300c615d27
 cpass.set('cred', 'hash', xhash)
 xphone = input(gr+"[+] Enter Phone Number : "+re)
 cpass.set('cred', 'phone', xphone)
