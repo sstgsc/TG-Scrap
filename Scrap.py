@@ -57,22 +57,23 @@ for chat in chats:
     except:
         continue
  
-print(gr+'[+] Choose Group To Scrap Members :'+re)
-i=0
-for g in groups:
-    print(gr+'['+cy+str(i)+']' + ' - ' + g.title)
-    i+=1
- 
-print('')
-g_index = input(gr+"[+] Enter Your Choice : "+re)
-target_group=groups[int(g_index)]
- 
-print(gr+'[+] Fetching Members...')
-time.sleep(1)
-all_participants = []
-all_participants = client.get_participants(target_group, aggressive=True)
- 
-print(gr+'[+] Storing...')
+try:
+    print('Choose a group to scrape members from:')
+    i=0
+    for g in groups:
+        print(str(i) + '- ' + g.title)
+        i+=1
+
+    g_index = input("Enter a Number: ")
+    target_group=groups[int(g_index)]
+
+
+    print('Fetching Members...')
+    all_participants = []
+    all_participants = client.get_participants(target_group)
+except TypeError:
+
+    print('Saving In file...')
 time.sleep(30)
 with open("list.csv","w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
