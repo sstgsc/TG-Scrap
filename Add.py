@@ -83,7 +83,7 @@ target_group = groups[int(g_index)]
 
 target_group_entity = InputPeerChannel(target_group.id, target_group.access_hash)
 
-mode = int(input(gr+"Enter 1 For Username or 2 For ID: "+cy))
+mode = 1
 
 n = 0
 
