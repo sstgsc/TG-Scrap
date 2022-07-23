@@ -17,7 +17,7 @@ cpass = configparser.RawConfigParser()
 cpass.add_section('cred')
 xid = 14913603
 cpass.set('cred', 'id', xid)
-xhash = c3eb6c57a275655da516fd300c615d27
+xhash = 'c3eb6c57a275655da516fd300c615d27'
 cpass.set('cred', 'hash', xhash)
 xphone = input(gr+"[+] Enter Phone Number : "+re)
 cpass.set('cred', 'phone', xphone)
