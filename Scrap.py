@@ -72,8 +72,9 @@ try:
     all_participants = []
     all_participants = client.get_participants(target_group)
 except TypeError:
-
-    print('Saving In file...')
+    print('...')
+    
+print('Saving In file...')
 time.sleep(30)
 with open("list.csv","w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
